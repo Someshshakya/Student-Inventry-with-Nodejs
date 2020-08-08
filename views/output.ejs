@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.sun {
+  /* The image used */
+  background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/06/Solid-Color-Wallpaper-HD-620x388.jpg");
+  /* background-color:blue; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+
+  /* min-height: 700px; */
+  /* Center and scale the image nicely */
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family:Arial, Helvetica, sans-serif;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+  margin-left: 60%;
+
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+
+}
+
+/* Navbar links */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgb(42, 245, 76);
+
+  color: black;
+  cursor: pointer;
+ 
+}
+.table1{
+  /*background-color: blue;*/
+  position: relative;
+  width: 290px;
+  height: 120px;
+  left:530px;
+  top:250px;
+}
+.exists{
+    text-align: center;
+    position: relative;
+    left: 10px;
+    top: 200px;
+    font-style: italic;
+    font-style: oblique;
+    color: whitesmoke;
+}
+</style>
+</head>
+<body class="sun">
+    <div class="container">
+      <div class="topnav">
+        <a  onclick="location.href='/'">Home</a>
+        <a  onclick="location.href='/signup'"> Sign Up </a>
+        <a class="button button2" onclick="location.href='/login'">Login</a>
+        <a  onclick="location.href='about'">About</a>
+      </div>
+  </div>
+  <div class="exists"><p style="font-size: 50px;"><%=data["FirstName"]%> <%=data["LastName"]%> </i></b>Signed In Successfully!</p></div>
+    <div class="table1">
+        <table  style="text-align: center; height: 100px; " >
+
+        <form method="POST" action="/login" style="text-align: center;">
+        <tr>
+            <td><label  > Email: </label></td><td> <input type="email" name="email" placeholder="Email id ..."></label></td> 
+        </tr>
+        <tr>
+            <td><label  > Passward: </label> </td><td><input type="password" name="password" placeholder="password"></label></td> 
+        </tr>
+        <tr>  
+           <td></td><td><input type="submit"></td> 
+           </tr>
+            </form>
+        </table>
+        </div>
+</body>
+</html>
